@@ -1,7 +1,5 @@
 class Wind(object):
 
-    def __init__(self):
-        self.Speed = str()
-
-    def set_wind(self, speed):
+    def __init__(self, speed):
         self.Speed = speed
+
