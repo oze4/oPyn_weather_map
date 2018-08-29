@@ -21,7 +21,8 @@ class Summary(object):
     Clouds = Clouds_Info()
     Coordinates = Coordinates_Info()
 
-    def __init__(self, timestamp, weather_id, city, code, visibility, base_, date_time,  # base params
+    def __init__(self,
+                 timestamp, weather_id, city, code, visibility, base_, date_time,  # base params
                  wind,  # from Wind.py
                  sys,  # from Sys.py
                  measurements,  # from Measurements.py
