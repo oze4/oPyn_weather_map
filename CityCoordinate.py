@@ -1,4 +1,6 @@
 class CityCoordinate(object):
-    def __init__(self, longitude, latitude):
-        self.Longitude = longitude
-        self.Latitude = latitude
+    Longitude = str()
+    Latitude = str()
+
+    def __init__(self):
+        pass
