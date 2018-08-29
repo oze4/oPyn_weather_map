@@ -1,22 +1,34 @@
-from CityCoordinate import *
-from Clouds import *
-from DescriptionInfo import *
-from Measurements import *
-from Sys import *
-from Wind import *
+import CityCoordinate
+import Clouds
+import DescriptionInfo
+import Measurements
+import Sys
+from Wind import Wind as WindInfo
 
 
 class Summary(object):
+    Timestamp = str()
+    Weather_Id = str()
+    City = str()
+    Code = str()
+    Visibility = str()
+    Base_ = str()
+    Date_Time = str()
+    Wind = WindInfo()
+    _Sys_ = Sys
+    _Measurements_ = Measurements
+    _DescriptionInfo_ = DescriptionInfo
+    _Clouds_ = Clouds
+    _CityCoordinate_ = CityCoordinate
 
     def __init__(self, timestamp, weather_id, city, code, visibility, base_, date_time,
-                 wind
+                 wind,
+                 sys,
+                 measurements,
+                 description_info,
+                 clouds,
+                 city_coordinate
                  ):
-        # ~base params timestamp, weather_id, city, code, visibility, base_, date_time, ~params from 'Clouds' object
-        # clouds_all, ~params from 'Wind' object wind_speed, ~params from 'Sys' object sys_type, sys_id, sys_message,
-        #  sys_country, sys_sunrise, sys_sunset, ~params from 'Measurements' object measurement_temp,
-        # measurement_pressure, measurement_humidity, measurement_temp_min, measurement_temp_max, ~params from
-        # 'DescriptionInfo' object dscptn_info_id_, dscptn_info_main_, dscptn_info_description, dscptn_info_icon,
-        # ~params from 'CityCoordinate' object city_coord_longitude, city_coord_latitude ):
         self.Timestamp = timestamp
         self.Weather_Id = weather_id
         self.City = city
@@ -25,3 +37,6 @@ class Summary(object):
         self.Base_ = base_
         self.Date_Time = date_time
         self.Wind.Speed = wind.Speed
+        self.Sys.Sys.Country = sys.Country
+        self.Sys.Sys.Id = sys.Id
+
