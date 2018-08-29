@@ -1,4 +1,4 @@
-from CityCoordinate import CityCoordinate as City_Coordinate_Info
+from CityCoordinate import CityCoordinate as Coordinates_Info
 from Clouds import Clouds as Clouds_Info
 from DescriptionInfo import DescriptionInfo as Description__Info
 from Measurements import Measurements as Measurements_Info
@@ -19,7 +19,7 @@ class Summary(object):
     Measurements = Measurements_Info()
     DescriptionInfo = Description__Info()
     Clouds = Clouds_Info()
-    Coordinates = City_Coordinate_Info()
+    Coordinates = Coordinates_Info()
 
     def __init__(self, timestamp, weather_id, city, code, visibility, base_, date_time,
                  wind,
@@ -27,7 +27,7 @@ class Summary(object):
                  measurements,
                  description_info,
                  clouds,
-                 city_coordinate
+                 coordinates
                  ):
         self.Timestamp = timestamp
         self.Weather_Id = weather_id
@@ -47,5 +47,6 @@ class Summary(object):
         self.DescriptionInfo.Id = description_info.Id
         self.DescriptionInfo.Description = description_info.Description
         self.DescriptionInfo.Icon = description_info.Icon
-
-
+        self.Clouds.All = clouds.All
+        self.Coordinates.Latitude = coordinates.Latitude
+        self.Coordinates.Longitude = coordinates.Longitude
