@@ -1,5 +1,7 @@
 class Clouds(object):
-    All = str()
 
     def __init__(self):
-        pass
+        self.All = str()
+
+    def set_clouds(self, all_):
+        self.All = all_
