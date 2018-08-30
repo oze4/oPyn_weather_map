@@ -33,4 +33,4 @@ class CurrentWeatherSummary(object):
                                                       measurements.Temp_Max)
         self.CityCoordinate = CityCoordinate.CityCoordinate(city_coordinate.Longitude, city_coordinate.Latitude)
         self.DescriptionInfo = DescriptionInfo.DescriptionInfo(description_info.Id, description_info.Main,
-                                                               description_info.Icon, description_info.Icon)
+                                                               description_info.Description, description_info.Icon)
