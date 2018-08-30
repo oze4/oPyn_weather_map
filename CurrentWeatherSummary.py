@@ -6,7 +6,7 @@ import CityCoordinate
 import DescriptionInfo
 
 
-class CurrentWeatherSummary(object):
+class CurrentWeatherSummary(object, Clouds, Sys, Wind, Measurements, CityCoordinate, DescriptionInfo):
 
     def __init__(self,
                  timestamp, weather_id, city, code, visibility, base_, date_time,
